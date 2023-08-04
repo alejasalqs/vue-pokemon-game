@@ -1,21 +1,15 @@
 <template>
   <div class="pokemon-container">
-    <img
-      class="pokemon-hidden"
-      :src="imgSrc"
-      alt="pokemon picture"
-    />
-    <img
-      v-if="showPokemon"
-      class="fade-in"
-      :src="imgSrc"
-      alt="pokemon picture"
-    />
+    <img class="pokemon-hidden" :src="imgSrc" alt="pokemon picture" />
+    <img v-if="showPokemon" class="fade-in" :src="imgSrc" alt="pokemon picture" />
   </div>
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  // use defineComponent in order to attach pokemonId to starter {} obj
   name: 'PokemonPicture',
   props: {
     pokemonId: {
@@ -33,7 +27,7 @@ export default {
       return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.pokemonId}.svg`;
     },
   },
-};
+});
 </script>
 <style scoped>
 .pokemon-container {
