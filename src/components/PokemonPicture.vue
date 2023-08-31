@@ -32,11 +32,14 @@ export default defineComponent({
 <style scoped>
 .pokemon-container {
   height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 img {
   height: 200px;
   position: absolute;
-  right: 32%;
+  /* right: 32%; */
   user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

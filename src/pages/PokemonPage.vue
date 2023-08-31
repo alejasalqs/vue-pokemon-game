@@ -1,7 +1,7 @@
 <template>
   <h1 v-if="!pokemon">Cargando...</h1>
   <div v-else>
-    <h1>Quien es este pokemon?</h1>
+    <h1>Who's that pokemon?</h1>
     <PokemonPicture :pokemonId="pokemon?.id" :showPokemon="showPokemon" />
     <PokemonOptions :pokemonArr="pokemonArr" @selection="checkAnswer(1, $event)" />
     <template v-if="showAnswer">
