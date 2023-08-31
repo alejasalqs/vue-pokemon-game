@@ -1,7 +1,10 @@
+<!-- eslint-disable vuejs-accessibility/click-events-have-key-events -->
 <template>
   <div class="options-container">
     <ul>
-      <li v-for="pokemon in pokemonArr" :key="pokemon.id">{{ pokemon.name }}</li>
+      <li v-for="pokemon in pokemonArr" :key="pokemon.id" @click="$emit('selection', pokemon.id)">
+        {{ pokemon.name }}
+      </li>
     </ul>
   </div>
 </template>
