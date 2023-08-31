@@ -7,7 +7,6 @@ const getPokemons = (): Array<number> => {
 };
 
 const getPokemonName = async (pokemons: Array<number>) : Promise<Pokemon[]> => {
-  console.log(pokemons);
   const arrPromises = [
     POKEMON_API.get(`/${pokemons[0]}`),
     POKEMON_API.get(`/${pokemons[1]}`),
